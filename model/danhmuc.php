@@ -12,6 +12,11 @@
         $listdanhmuc=pdo_query($sql);
         return $listdanhmuc;
     }
+    function load_all_dm(){
+        $sql="SELECT * FROM danhmuc order by iddm desc";
+        $listdm=pdo_query($sql);
+        return $listdm;
+    }
 
     function delete_dm() {
         $sql = "DELETE FROM danhmuc oder by iddm=$iddm";

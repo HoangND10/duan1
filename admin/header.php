@@ -17,7 +17,7 @@
         <div class="row mb menu">
             <ul>
                 <li><a href="index.php">TRANG CHỦ</a></li>
-                <li><a href="index.php?act=">DANH MỤC</a></li>
+                <li><a href="index.php?act=adddm">DANH MỤC</a></li>
                 <li><a href="index.php?act=">HÀNG HÓA</a></li>
                 <li><a href="index.php?act=dskh">KHÁCH HÀNG</a></li>
                 <li><a href="index.php?act=">BÌNH LUẬN</a></li>
