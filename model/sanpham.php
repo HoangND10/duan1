@@ -53,7 +53,7 @@
         if($hinh!=""){
             $sql = "Update `sanpham` Set `tensp`='{$tensp}, `gia`='{$gia}, `soluong`='{$soluong}', `mota`='{$mota}', `idm`='{$idm}', `hinh`='{$hinh}' where `sanpham`.`idsp`=$idsp" ;
         }else{
-        $sql = "Update `sanpham` Set `tensp`='{$tensp}, `gia`='{$gia}, `soluong`='{$soluong}', `mota`='{$mota}', `idm`='{$idm}' where `sanpham`.`idsp`=$idsp" ;
+            $sql = "Update `sanpham` Set `tensp`='{$tensp}, `gia`='{$gia}, `soluong`='{$soluong}', `mota`='{$mota}', `idm`='{$idm}' where `sanpham`.`idsp`=$idsp" ;
     }
     pdo_execute($sql);
     }
