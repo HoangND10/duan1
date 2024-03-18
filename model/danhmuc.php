@@ -8,7 +8,7 @@
 
 
     function loadall() {
-        $sql= "SELECT * FROM danhmuc oder by iddm desc";
+        $sql= "SELECT * FROM danhmuc order by iddm desc";
         $listdanhmuc=pdo_query($sql);
         return $listdanhmuc;
     }
@@ -19,7 +19,7 @@
     }
 
     function delete_dm() {
-        $sql = "DELETE FROM danhmuc oder by iddm=$iddm";
+        $sql = "DELETE FROM danhmuc order by iddm=$iddm";
         pdo_execute($sql);
     }
 
