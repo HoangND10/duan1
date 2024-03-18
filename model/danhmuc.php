@@ -1,5 +1,4 @@
 <?php
-    // require_once 'pdo.php';
 
     function insert_dm($tendanhmuc) {
         $sql = "INSERT INTO danhmuc(tendm) VALUES ('$tendanhmuc')";
@@ -33,17 +32,30 @@
         $sql="UPDATE danhmuc SET `tendm`='$tenloai' where id=$iddm";
         pdo_execute($sql);
     }
-
-
-    function load_ten_dm($iddm) {
-        if($iddm>0  ){
-            $sql= "SELECT * FROM sanpham where id=".iddm;
-            $dm=pdo_query_one($sql);
-            extract($dm);
-            return $tendm;
-        }else{
-            return "";
-        }
-    }
-
- ?>
+function insert_danhmuc($tenloai)
+{
+    $sql = "insert into danhmuc(tendm) values('$tenloai')";
+    pdo_execute($sql);
+}
+function delete_danhmuc($id)
+{
+    $sql = "delete from danhmuc where iddm=" . $id;
+    pdo_execute($sql);
+}
+function loadall_danhmuc()
+{
+    $sql = "select * from danhmuc order by iddm desc";
+    $listdanhmuc = pdo_query($sql);
+    return $listdanhmuc;
+}
+function loadone_danhmuc($id)
+{
+    $sql = "select * from danhmuc where iddm=" . $id;
+    $dm = pdo_query_one($sql);
+    return $dm;
+}
+function update_danhmuc($tenloai, $iddm)
+{
+    $sql = "update danhmuc set tendm='" . $tenloai . "' where iddm=" . $iddm;
+    pdo_execute($sql);
+}
