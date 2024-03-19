@@ -5,6 +5,8 @@ include "../model/taikhoan.php";
 include "../model/thongke.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/donhang.php";
+include "../model/binhluan.php";
 
 
 
@@ -176,6 +178,36 @@ if (isset($_GET['act'])) {
             $listdanhmuc = loadall_danhmuc();
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
+            break;
+        case 'bill':
+            $listbill = loadall_bill();
+            $listtt = loadall_tt();
+            include "bill/listbill.php";
+            break;
+        case "updateStatus":
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                if (isset($_POST['iddh']) && isset($_POST['trangthai'])) {
+                    $id = $_POST['iddh'];
+                    $trangthai = $_POST['trangthai'];
+                    updateStatus($id, $trangthai);
+                }
+            }
+            // Chuyển hướng trở lại trang list.php sau khi cập nhật trạng thái
+            header('Location: index.php?act=bill');
+
+            break;
+        case 'dsbl':
+            $listsanpham = loadall_sanpham();
+            $listtaikhoan = loadall_taikhoan();
+            $listbinhluan = loadall_binhluan();
+            include "binhluan/list.php";
+            break;
+        case 'xoabl':
+            if (isset($_GET['idbl']) && ($_GET['idbl'] > 0)) {
+                delete_binhluan($_GET['idbl']);
+            }
+            $listbinhluan = loadall_binhluan(0);
+            include "binhluan/list.php";
             break;
         default:
             include "home.php";

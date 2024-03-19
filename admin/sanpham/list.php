@@ -51,7 +51,7 @@
                             <td>' . $mota . '</td>
                             <td>' . $gia . '</td>
                             <td>' . $soluong . '</td>
-                            <td>' . $iddm . '</td>
+                            <td>' . $tendm . '</td>
                             <td>' . $luotxem . '</td>
                             <td><a href="' . $suasp . '"><input type="button" value="Sửa"></a><a href="' . $xoasp . '"><input type="button" value="Xóa"></a></td>
                         </tr>';

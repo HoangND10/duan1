@@ -17,7 +17,10 @@ function loadall_sanpham_home()
 }
 function loadall_sanpham($kyw = "", $iddm = 0)
 {
-    $sql = "select * from sanpham where 1";
+    $sql = "SELECT sanpham.*, danhmuc.tendm AS tendm
+    FROM sanpham
+    INNER JOIN danhmuc ON sanpham.iddm = danhmuc.iddm
+    WHERE 1";
     if ($kyw != "") {
         $sql .= " and tendm like '%" . $kyw . "%'";
     }
