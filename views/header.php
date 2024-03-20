@@ -75,7 +75,7 @@
                     <!-- Header Logo Start -->
                     <div class="col-auto align-self-center">
                         <div class="header-logo">
-                            <a href="index.html"><img src="./assets/images/logo/logo.png" alt="Site Logo" /></a>
+                            <a href="index.php"><img src="./assets/images/logo/logo.png" alt="Site Logo" /></a>
                         </div>
                     </div>
                     <!-- Header Logo End -->
