@@ -1,7 +1,7 @@
 <?php
-// if (is_array($user)) {
-//     extract($user);
-// }
+if (is_array($user)) {
+    extract($user);
+}
 ?>
 <div class="row">
     <div class="row frmtitle">
@@ -18,10 +18,6 @@
 
         ?>
         <form action="index.php?act=updatetk" method="POST">
-            <!-- <div class="row mb10">Email<input type="email" name="email" value=""></div>
-            <div class="row mb10">Tên đăng nhập<input type="text" name="user" value=""></div>
-            <div class="row mb10">Mật khẩu<input type="password" name="pass" value=""></div>
-            <div class="row mb10">Điện thoại<input type="text" name="phone" value=""></div> -->
             <div class="row mb10">Họ và tên<input type="text" name="hoten" value="<?= $hoten ?>"></div>
             <div class="row mb10">Email<input type="email" name="email" value="<?= $email ?>"></div>
             <div class="row mb10">Điện thoại<input type="text" name="sdt" value="<?= $sdt ?>"></div>

@@ -8,9 +8,6 @@ include "../model/sanpham.php";
 include "../model/donhang.php";
 include "../model/binhluan.php";
 
-
-
-//controller
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -48,7 +45,7 @@ if (isset($_GET['act'])) {
             break;
         case 'suatk':
             if (isset($_GET['iduser']) && $_GET['iduser'] > 0) {
-                $user = loadone_sanpham($_GET['iduser']);
+                $user = loadone_taikhoan($_GET['iduser']);
             }
             include "taikhoan/update.php";
             break;
