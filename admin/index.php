@@ -4,9 +4,13 @@ include "../model/pdo.php";
 include "../model/taikhoan.php";
 include "../model/thongke.php";
 include "../model/danhmuc.php";
+
 include "../model/sanpham.php";
 include "../model/donhang.php";
 include "../model/binhluan.php";
+
+
+
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
