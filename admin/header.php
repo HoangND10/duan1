@@ -18,11 +18,11 @@
             <ul>
                 <li><a href="index.php">TRANG CHỦ</a></li>
                 <li><a href="index.php?act=adddm">DANH MỤC</a></li>
-                <li><a href="index.php?act=">HÀNG HÓA</a></li>
+                <li><a href="index.php?act=listsp">HÀNG HÓA</a></li>
                 <li><a href="index.php?act=dskh">KHÁCH HÀNG</a></li>
-                <li><a href="index.php?act=">BÌNH LUẬN</a></li>
+                <li><a href="index.php?act=dsbl">BÌNH LUẬN</a></li>
                 <li><a href="index.php?act=thongke">THỐNG KÊ</a></li>
-                <li><a href="index.php?act=">ĐƠN HÀNG</a></li>
+                <li><a href="index.php?act=bill">ĐƠN HÀNG</a></li>
                 <li><a href="../view/index.php">THOÁT</a></li>
             </ul>
         </div>

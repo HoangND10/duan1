@@ -32,7 +32,7 @@ function delete_taikhoan($iduser)
     $sql = "delete from user where iduser=" . $iduser;
     pdo_execute($sql);
 }
-function loadone_sanpham($iduser)
+function loadone_taikhoan($iduser)
 {
     $sql = "select * from user where iduser=" . $iduser;
     $user = pdo_query_one($sql);
