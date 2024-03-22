@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from template.hasthemes.com/furns/furns/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Mar 2024 05:52:19 GMT -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -39,7 +40,7 @@
         }
     </script>
 
-        <!-- vendor css (Bootstrap & Icon Font) -->
+    <!-- vendor css (Bootstrap & Icon Font) -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/simple-line-icons.css" />
     <link rel="stylesheet" href="assets/css/vendor/ionicons.min.css" /> -->
@@ -66,7 +67,7 @@
     <!-- Header Area start  -->
     <div class="header section">
         <!-- Header Top Message Start -->
-    
+
         <!-- Header Top  End -->
         <!-- Header Bottom  Start -->
         <div class="header-bottom d-none d-lg-block">
@@ -84,8 +85,7 @@
                     <div class="col align-self-center">
                         <div class="header-actions">
                             <div class="header_account_list">
-                                <a href="javascript:void(0)" class="header-action-btn search-btn"><i
-                                        class="icon-magnifier"></i></a>
+                                <a href="javascript:void(0)" class="header-action-btn search-btn"><i class="icon-magnifier"></i></a>
                                 <div class="dropdown_search">
                                     <form class="action-form" action="#">
                                         <input class="form-control" placeholder="Enter your search key" type="text">
@@ -95,8 +95,7 @@
                             </div>
                             <!-- Single Wedge Start -->
                             <div class="header-bottom-set dropdown">
-                                <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
-                                        class="icon-user"></i></button>
+                                <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a class="dropdown-item" href="my-account.html">My account</a></li>
                                     <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
@@ -135,8 +134,7 @@
                     <div class="col align-self-center">
                         <div class="header-actions">
                             <div class="header_account_list">
-                                <a href="javascript:void(0)" class="header-action-btn search-btn"><i
-                                        class="icon-magnifier"></i></a>
+                                <a href="javascript:void(0)" class="header-action-btn search-btn"><i class="icon-magnifier"></i></a>
                                 <div class="dropdown_search">
                                     <form class="action-form" action="#">
                                         <input class="form-control" placeholder="Enter your search key" type="text">
@@ -146,8 +144,7 @@
                             </div>
                             <!-- Single Wedge Start -->
                             <div class="header-bottom-set dropdown">
-                                <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
-                                        class="icon-user"></i></button>
+                                <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a class="dropdown-item" href="my-account.html">My account</a></li>
                                     <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
@@ -178,19 +175,28 @@
                         <div class="main-menu manu-color-white">
                             <ul>
                                 <li class="dropdown"><a href="index.php">Home </i></a>
-                                    
+
                                 </li>
                                 <li><a href="about.php">About us</a></li>
-                                
+
                                 <li class="dropdown"><a href="#">Shop <i class="ion-ios-arrow-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="404.html">404 Page</a></li>
-                                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                        <li><a href="faq.html">Faq Page</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon Page</a></li>
+
+                                        <?php
+                                        foreach ($listdanhmuc as $danhmuc) {
+                                            extract($danhmuc);
+                                            echo '<option value="' . $iddm . '">' . $tendm . '</option>';
+                                        }
+                                        ?>
+                                        
                                     </ul>
                                 </li>
-                                
+                                <li>
+
+                                <li>
+
+                                </li>
+
                                 <li><a href="contact.html">Contact us</a></li>
                             </ul>
                         </div>
@@ -204,7 +210,7 @@
     <script src="assets/js/plugins/plugins.min.js"></script>
 
 
-   
+
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>

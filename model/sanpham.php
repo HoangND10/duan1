@@ -62,3 +62,6 @@ function update_sanpham($idsp, $iddm, $tensp, $giasp, $soluong, $mota, $hinh)
         $sql = "update sanpham set iddm='" . $iddm . "',tensp='" . $tensp . "',gia='" . $giasp . "',soluong='" . $soluong . "',mota='" . $mota . "' where idsp=" . $idsp;
     pdo_execute($sql);
 }
+
+
+
