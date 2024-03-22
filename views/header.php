@@ -76,7 +76,7 @@
                     <!-- Header Logo Start -->
                     <div class="col-auto align-self-center">
                         <div class="header-logo">
-                            <a href="index.php"><img src="./assets/images/logo/logo.png" alt="Site Logo" /></a>
+                            <a href="index.php"><img width="150px" src="./assets/images/logo/124h.png" alt="Site Logo" /></a>
                         </div>
                     </div>
                     <!-- Header Logo End -->
@@ -188,14 +188,10 @@
                                             echo '<option value="' . $iddm . '">' . $tendm . '</option>';
                                         }
                                         ?>
-                                        
+
                                     </ul>
                                 </li>
-                                <li>
 
-                                <li>
-
-                                </li>
 
                                 <li><a href="contact.html">Contact us</a></li>
                             </ul>
