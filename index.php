@@ -3,12 +3,12 @@ session_start();
 include "model/taikhoan.php";
 include 'model/pdo.php';
 include 'model/danhmuc.php';
-$listdanhmuc = loadall_danhmuc();
 include 'model/sanpham.php';
-$sanpham = loadall_sanpham_home();
 include 'views/header.php';
-include 'views/home.php';
-include 'views/footer.php';
+
+$sanpham = loadall_sanpham_home();
+
+$listdanhmuc = loadall_danhmuc();
 
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
@@ -103,4 +103,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             
         
     }
+}else{
+    include 'views/home.php';
 }
+include 'views/footer.php';
+
+?>

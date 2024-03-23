@@ -98,11 +98,21 @@
                             <div class="header-bottom-set dropdown">
                                 <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="my-account.html">My account</a></li>
-                                    <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                    <li><a class="dropdown-item" href="login.html">Sign in</a></li>
-                                </ul>
+                                    <?php
+                                        if(isset($_SESSION['taikhoan'])){
+                                            echo ' <li><a class="dropdown-item" href="index.php?act=mytk">Tai khoan</a></li>';
+                                        }else{
+                                            echo ' <li><a class="dropdown-item" href="index.php?act=login">Login</a></li>';
+                                        }
+                                    ?>
+                                        <!-- <li><a class="dropdown-item" href="my-account.html">My account</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+                                        <li><a class="dropdown-item" href="login.html">Sign in</a></li> -->
+                                    </ul>
                             </div>
+                            
+
+                           
                             <!-- Single Wedge End -->
                             <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                 <i class="icon-handbag"></i>

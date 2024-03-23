@@ -28,7 +28,9 @@
                                             </div>
                                         </form>
                                         <?php
-                                            if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
+                                              if(isset($thongbao1)&&($thongbao1!="")) echo $thongbao1;                                         
+
+                                            
                                         ?>
                                     </div>
                                 </div>
@@ -45,8 +47,7 @@
                                             </div>
                                         </form>
                                         <?php 
-                                           if(isset($thongbao1)&&($thongbao1!="")) echo $thongbao1;                                         
-                                        
+                                            if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
                                         ?>
                                     </div>
                                 </div>
