@@ -1,4 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
 ob_start();
 session_start();
 include "model/taikhoan.php";
@@ -14,32 +18,35 @@ $listdanhmuc = loadall_danhmuc();
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
-        case 'sanpham':
-            if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
-                $iddm = $_GET['iddm'];
-                $dssp = loadall_sanpham("", $iddm);
-                $tendm = load_ten_dm($iddm);
-                include "./sanpham.php";
-            } else {
-                include "./views/home.php";
-            }
+            case "sanpham":
+                if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                    $kyw=$_POST['kyw'];
+                }else{
+                    $kyw="";
+                }
+                if(isset($_GET['iddm'])&&($_GET['iddm']>0)){
+                    $iddm=$_GET['iddm'];
+                }else{
+                    $iddm = 0;
+                }
+                    $listsanpham=loadall_sanpham($kyw,$iddm);
+                    include "views/sanpham.php";
+                    break;
             break;
-        case 'spct':
-            if (isset($_GET['idsp']) && ($_GET['idsp'] > 0)) {
-                $id = $_GET['idsp'];
-                $onesp = loadone_sanpham($id);
-                extract($onesp);
-                include "./chitietsp.php";
-            } else {
-                include "./views/home.php";
-            }
-            break;
+            case "chitietsp":
+                if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
+                    $sanpham=loadone_sanpham($_GET['idsp']);
+                }
+                $spcungloai=load_sanpham_cungloai($_GET['idsp'],$sanpham['iddm']);
+                include "views/chitietsp.php";
+                break;
+        
 
         case 'shop':
-            include "./views/shop.php";
+            include "views/shop.php";
             break;
         case 'mytk':
-            include "./views/taikhoan.php";
+            include "views/taikhoan.php";
             break;
         case 'dangky':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {

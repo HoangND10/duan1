@@ -190,14 +190,14 @@
                                 </li>
                                 <li><a href="index.php?act=about">About us</a></li>
 
-                                <li class="dropdown"><a href="#">Shop <i class="ion-ios-arrow-down"></i></a>
+                                <li class="dropdown"><a href="index.php?act=shop">Shop <i class="ion-ios-arrow-down"></i></a>
                                     <ul class="sub-menu">
 
                                         <?php
                                         $listdm=loadall_danhmuc();
                                         foreach($listdm as $dm){
                                             extract($dm);
-                                            $linkdm='index.php?act=sanpham&&id_danhmuc='.$iddm;
+                                            $linkdm='index.php?act=shop&&id_danhmuc='.$iddm;
                                             echo '<a href='.$linkdm.'>'.$tendm.'</a>';
                                         }
                                         ?>
