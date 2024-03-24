@@ -39,35 +39,35 @@ function loadone_taikhoan($iduser)
     return $user;
 }
 
-function sendMailPass($email, $taikhoan, $matkhau) {
-    require 'PHPMailer/src/Exception.php';
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
+// function sendMailPass($email, $taikhoan, $matkhau) {
+//     require 'PHPMailer/src/Exception.php';
+//     require 'PHPMailer/src/PHPMailer.php';
+//     require 'PHPMailer/src/SMTP.php';
 
-    $mail = new PHPMailer\PHPMailer\PHPMailer(true);
+//     $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
-    try {
-        //Server settings
-        $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_OFF;                      //Enable verbose debug output
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'sandbox.smtp.mailtrap.io';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = '57e5c496336f6d';                     //SMTP username
-        $mail->Password   = '2d9a512991c90c';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
-        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+//     try {
+//         //Server settings
+//         $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_OFF;                      //Enable verbose debug output
+//         $mail->isSMTP();                                            //Send using SMTP
+//         $mail->Host       = 'sandbox.smtp.mailtrap.io';                     //Set the SMTP server to send through
+//         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+//         $mail->Username   = '57e5c496336f6d';                     //SMTP username
+//         $mail->Password   = '2d9a512991c90c';                               //SMTP password
+//         $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+//         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         
-        //Recipients
-        $mail->setFrom('duanmau@example.com', 'DuAnMau');
-        $mail->addAddress($email, $username);     //Add a recipient
+//         //Recipients
+//         $mail->setFrom('duanmau@example.com', 'DuAnMau');
+//         $mail->addAddress($email, $username);     //Add a recipient
 
-        //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Nguoi dung quen mat khau';
-        $mail->Body    = 'Mau khau cua ban la' .$pass;
+//         //Content
+//         $mail->isHTML(true);                                  //Set email format to HTML
+//         $mail->Subject = 'Nguoi dung quen mat khau';
+//         $mail->Body    = 'Mau khau cua ban la' .$pass;
 
-        $mail->send();
-    } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    }
-}
+//         $mail->send();
+//     } catch (Exception $e) {
+//         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+//     }
+// }

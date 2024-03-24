@@ -3,6 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+ob_start();
 session_start();
 include "model/taikhoan.php";
 include 'model/pdo.php';
@@ -41,75 +42,66 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'shop':
             include "./views/shop.php";
             break;
-        case 'login':
-            include "./views/login/dangky.php";
-            break;
         case 'mytk':
             include "./views/taikhoan.php";
             break;
         case 'dangky':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
-                $email= $_POST['email'];
-                $taikhoan= $_POST['taikhoan'];
-                $matkhau= $_POST['matkhau'];
-                insert_tk($email,$taikhoan,$matkhau);
-                $thongbao="dang ky thanh cong";
+                $email = $_POST['email'];
+                $taikhoan = $_POST['taikhoan'];
+                $matkhau = $_POST['matkhau'];
+                $hoten = $_POST['hoten'];
+                $sdt = $_POST['sdt'];
+                $diachi = $_POST['diachi'];
+                insert_taikhoan($hoten, $email, $sdt, $diachi, $taikhoan, $matkhau);
+                $thongbao = "Đăng ký thành công";
             }
             include "views/login/dangky.php";
             break;
         case 'dangnhap':
-            if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
-                $taikhoan= $_POST['taikhoan'];
-                $matkhau= $_POST['matkhau'];
-                $checkuser=dangnhap($taikhoan,$matkhau);
-                if(is_array($checkuser)){
-                    $_SESSION['taikhoan']=$checkuser;
-                    $thongbao1= "Ban da dang nhap thanh cong";
-                    include "views/home.php";
-                }
-                else{
-                    $thongbao1 = "dang nhap that bai";
-                    include "views/login/dangky.php";
+            if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                $taikhoan = $_POST['taikhoan'];
+                $matkhau = $_POST['matkhau'];
+                $checkuser = checkuser($taikhoan, $matkhau);
+                if (is_array($checkuser)) {
+                    $_SESSION['taikhoan'] = $checkuser;
+                    header('Location: index.php');
+                } else {
+                    $thongbao1 = "Tài khoản không tồn tại";
                 }
             }
             include "views/login/dangky.php";
             break;
 
-        case 'edit_taikhoan':
-            if(isset($_POST['capnhap'])&&($_POST['capnhap'])){
-                $taikhoan=$_POST['taikhoan'];
-                $matkhau=$_POST['matkhau'];
-                $email=$_POST['email'];
-                $sdt=$_POST['sdt'];
-                $diachi=$_POST['diachi'];
-                $iduser=$_POST['iduser'];
-                $hoten=$_POST['hoten'];
+            // case 'edit_taikhoan':
+            //     if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
+            //         $taikhoan = $_POST['taikhoan'];
+            //         $matkhau = $_POST['matkhau'];
+            //         $email = $_POST['email'];
+            //         $sdt = $_POST['sdt'];
+            //         $diachi = $_POST['diachi'];
+            //         $iduser = $_POST['iduser'];
+            //         $hoten = $_POST['hoten'];
 
-                update_taikhoan($iduser, $hoten, $email, $sdt, $diachi, $taikhoan, $matkhau);
-                $_SESSION['taikhoan'] = dangnhap($taikhoan,$matkhau);
-
-            }
-            include "views/login/edit_taikhoan.php";
-            break;
-        case 'quenmk':
-            if(isset($_POST['guiemail'])){
-                $email = $_POST['email'];
-                $sendMaiMess=sendMail($email);
-            }
+            //         update_taikhoan($iduser, $hoten, $email, $sdt, $diachi, $taikhoan, $matkhau);
+            //         $_SESSION['taikhoan'] = dangnhap($taikhoan, $matkhau);
+            //     }
+            //     include "views/login/edit_taikhoan.php";
+            //     break;
+            // case 'quenmk':
+            //     if (isset($_POST['guiemail'])) {
+            //         $email = $_POST['email'];
+            //         $sendMaiMess = sendMail($email);
+            //     }
         case 'dangxuat':
-            dangxuat();
-            include "views/home.php";
+            session_unset();
+            header('location: index.php');
             break;
         case 'thanhcong':
             include "index.php";
             break;
-
-            
-        
     }
-}else{
+} else {
     include 'views/home.php';
 }
 include 'views/footer.php';
-
-?>
