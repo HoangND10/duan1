@@ -3,7 +3,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-left-image mb-md-30px mb-lm-30px" data-aos="fade-up">
-                        <img src="assets/images/about-image/1.jpg" alt="" class="img-responsive w-100" />
+                        <img src="./assets/images/about-image/1.jpg" alt="" class="img-responsive w-100" />
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -68,23 +68,32 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 pr-0">
                     <div class="banner-product-image">
-                        <a class="venobox " href="assets/images/banner/8.jpg" data-gall="myGallery">
-                            <img src="assets/images/banner/8.jpg" class="img-fluid w-100" alt="Banner images">
+                        <a class="venobox " href="./assets/images/banner/8.jpg" data-gall="myGallery">
+                            <img src="./assets/images/banner/8.jpg" class="img-fluid w-100" alt="Banner images">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="banner-product-image mt-lm-15px">
-                        <a class="venobox " href="assets/images/banner/9.jpg" data-gall="myGallery">
-                            <img src="assets/images/banner/9.jpg" class="img-fluid w-100" alt="Banner images">
+                        <a class="venobox " href="./assets/images/banner/9.jpg" data-gall="myGallery">
+                            <img src="./assets/images/banner/9.jpg" class="img-fluid w-100" alt="Banner images">
                         </a>
                     </div>
                     <div class="banner-product-image mt-3">
-                        <a class="venobox " href="assets/images/banner/10.jpg" data-gall="myGallery">
-                            <img src="assets/images/banner/10.jpg" class="img-fluid w-100" alt="Banner images">
+                        <a class="venobox " href="./assets/images/banner/10.jpg" data-gall="myGallery">
+                            <img src="./assets/images/banner/10.jpg" class="img-fluid w-100" alt="Banner images">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="./assets/js/vendor/vendor.min.js"></script>
+    <script src=".assets/js/plugins/plugins.min.js"></script>
+
+
+
+
+    <!-- Main Js -->
+    <script src="./assets/js/main.js"></script>

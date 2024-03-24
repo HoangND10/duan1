@@ -19,7 +19,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="product-thumbnail">
-                                            <a href="#"><img class="img-responsive ml-15px" src="assets/images/product-image/1.jpg" alt="" /></a>
+                                            <a href="#"><img class="img-responsive ml-15px" src="./assets/images/product-image/1.jpg" alt="" /></a>
                                         </td>
                                         <td class="product-name"><a href="#">Product Name</a></td>
                                         <td class="product-price-cart"><span class="amount">$60.00</span></td>
@@ -35,7 +35,7 @@
                                     </tr>
                                     <tr>
                                         <td class="product-thumbnail">
-                                            <a href="#"><img class="img-responsive ml-15px" src="assets/images/product-image/2.jpg" alt="" /></a>
+                                            <a href="#"><img class="img-responsive ml-15px" src="./assets/images/product-image/2.jpg" alt="" /></a>
                                         </td>
                                         <td class="product-name"><a href="#">Product Name</a></td>
                                         <td class="product-price-cart"><span class="amount">$50.00</span></td>
@@ -51,7 +51,7 @@
                                     </tr>
                                     <tr>
                                         <td class="product-thumbnail">
-                                            <a href="#"><img class="img-responsive ml-15px" src="assets/images/product-image/3.jpg" alt="" /></a>
+                                            <a href="#"><img class="img-responsive ml-15px" src="./assets/images/product-image/3.jpg" alt="" /></a>
                                         </td>
                                         <td class="product-name"><a href="#">Product Name</a></td>
                                         <td class="product-price-cart"><span class="amount">$70.00</span></td>

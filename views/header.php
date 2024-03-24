@@ -188,22 +188,26 @@
                                 <li class="dropdown"><a href="index.php">Home </i></a>
 
                                 </li>
-                                <li><a href="about.php">About us</a></li>
+                                <li><a href="index.php?act=about">About us</a></li>
 
                                 <li class="dropdown"><a href="#">Shop <i class="ion-ios-arrow-down"></i></a>
                                     <ul class="sub-menu">
 
                                         <?php
-                                        foreach ($listdanhmuc as $danhmuc) {
-                                            extract($danhmuc);
-                                            echo '<option value="' . $iddm . '">' . $tendm . '</option>';
+                                        $listdm=loadall_danhmuc();
+                                        foreach($listdm as $dm){
+                                            extract($dm);
+                                            $linkdm='index.php?act=sanpham&&id_danhmuc='.$iddm;
+                                            echo '<a href='.$linkdm.'>'.$tendm.'</a>';
                                         }
                                         ?>
 
                                     </ul>
                                 </li>
 
-                                <li><a href="contact.html">Contact us</a></li>
+                               
+
+                                <li><a href="index.php?act=lienhe">Contact us</a></li>
                             </ul>
                         </div>
                     </div>
