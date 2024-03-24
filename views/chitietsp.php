@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
     extract($sanpham);
-?> -->
+?>
 <div class="product-details-area pt-100px pb-100px">
         <div class="container">
             <div class="row">
@@ -8,24 +8,11 @@
                     <!-- Swiper -->
                     <div class="swiper-container zoom-top">
                         <div class="swiper-wrapper">
-                            <!-- <?php $hinh=$hinhpath.$hinh;
-                                echo '<div class="swiper-slide zoom-image-hover"> <img class="img-responsive m-auto" src="assets/images/product-image/zoom-image/1.jpg" alt=""> </div>'
-                            ?> -->
-                            <div class="swiper-slide zoom-image-hover">
-                                <img class="img-responsive m-auto" src="./assets/images/product-image/zoom-image/1.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide zoom-image-hover">
-                                <img class="img-responsive m-auto" src="./assets/images/product-image/zoom-image/2.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide zoom-image-hover">
-                                <img class="img-responsive m-auto" src="./assets/images/product-image/zoom-image/3.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide zoom-image-hover">
-                                <img class="img-responsive m-auto" src="./assets/images/product-image/zoom-image/4.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide zoom-image-hover">
-                                <img class="img-responsive m-auto" src="./assets/images/product-image/zoom-image/5.jpg" alt="">
-                            </div>
+                            <?php $img = "upload/" . $hinh;
+
+                                echo '<div class="swiper-slide zoom-image-hover"> <img class="img-responsive m-auto" src='.$img.' alt=""> </div>'
+                            ?>
+                            
                         </div>
                     </div>
                     <div class="swiper-container zoom-thumbs slider-nav-style-1 small-nav mt-15px mb-15px">
@@ -55,9 +42,10 @@
                 </div>
                 <div class="col-lg-7 col-sm-12 col-xs-12" data-aos="fade-up">
                     <div class="product-details-content quickview-content">
-                        <h2>Originals Kaval Windbr</h2>
+                        
+                        <?php echo '<h2>'.$tensp.'</h2>' ?>
                         <p class="reference">Reference:<span> demo_17</span></p>
-                        <div class="pro-details-rating-wrap">
+                        <!-- <div class="pro-details-rating-wrap">
                             <div class="rating-product">
                                 <i class="ion-android-star"></i>
                                 <i class="ion-android-star"></i>
@@ -66,10 +54,12 @@
                                 <i class="ion-android-star"></i>
                             </div>
                             <span class="read-review"><a class="reviews" href="#">Read reviews (1)</a></span>
-                        </div>
+                        </div> -->
                         <div class="pricing-meta">
                             <ul>
-                                <li class="old-price not-cut">$18.90</li>
+                                
+                                <?php echo '<li class="old-price not-cut">'.$gia.'.000</li>' ?>
+
                             </ul>
                         </div>
                         <p class="quickview-para m-0">Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud exercitation ullamco</p>
@@ -78,7 +68,7 @@
                                 <button class="add-cart btn btn-primary btn-hover-primary" href="#"> Buy Now</button>
                             </div>
                         </div>
-                        <div class="pro-details-wish-com">
+                        <!-- <div class="pro-details-wish-com">
                             <div class="pro-details-wishlist">
                                 <a href="wishlist.html"><i class="ion-android-favorite-outline"></i>Add to
                                     wishlist</a>
@@ -86,8 +76,8 @@
                             <div class="pro-details-compare">
                                 <a href="compare.html"><i class="ion-ios-shuffle-strong"></i>Add to compare</a>
                             </div>
-                        </div>
-                        <div class="pro-details-social-info">
+                        </div> -->
+                        <!-- <div class="pro-details-social-info">
                             <span>Share</span>
                             <div class="social-info">
                                 <ul class="d-flex">
@@ -105,7 +95,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="pro-details-policy">
                             <ul>
                                 <li><img src="assets/images/icons/policy.png" alt="" /><span>Security Policy (Edit With
@@ -136,10 +126,11 @@
                     <div id="des-details2" class="tab-pane active">
                         <div class="product-anotherinfo-wrapper">
                             <ul>
-                                <li><span>Weight</span> 400 g</li>
+                                <!-- <li><span>Weight</span> 400 g</li>
                                 <li><span>Dimensions</span>10 x 10 x 15 cm</li>
                                 <li><span>Materials</span> 60% cotton, 40% polyester</li>
-                                <li><span>Other Info</span> American heirloom jean shorts pug seitan letterpress</li>
+                                <li><span>Other Info</span> American heirloom jean shorts pug seitan letterpress</li> -->
+                                <?php echo $mota; ?>
                             </ul>
                         </div>
                     </div>
@@ -167,13 +158,13 @@
                                                     <div class="review-name">
                                                         <h4>White Lewis</h4>
                                                     </div>
-                                                    <div class="rating-product">
+                                                    <!-- <div class="rating-product">
                                                         <i class="ion-android-star"></i>
                                                         <i class="ion-android-star"></i>
                                                         <i class="ion-android-star"></i>
                                                         <i class="ion-android-star"></i>
                                                         <i class="ion-android-star"></i>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                                 <div class="review-left">
                                                     <a href="#">Reply</a>
@@ -186,33 +177,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="single-review child-review">
-                                        <div class="review-img">
-                                            <img src="assets/images/review-image/2.png" alt="" />
-                                        </div>
-                                        <div class="review-content">
-                                            <div class="review-top-wrap">
-                                                <div class="review-left">
-                                                    <div class="review-name">
-                                                        <h4>White Lewis</h4>
-                                                    </div>
-                                                    <div class="rating-product">
-                                                        <i class="ion-android-star"></i>
-                                                        <i class="ion-android-star"></i>
-                                                        <i class="ion-android-star"></i>
-                                                        <i class="ion-android-star"></i>
-                                                        <i class="ion-android-star"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="review-left">
-                                                    <a href="#">Reply</a>
-                                                </div>
-                                            </div>
-                                            <div class="review-bottom">
-                                                <p>Vestibulum ante ipsum primis aucibus orci luctustrices posuere cubilia Curae Sus pen disse viverra ed viverra. Mauris ullarper euismod vehicula.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="col-lg-5">
@@ -222,13 +187,13 @@
                                         <form action="#">
                                             <div class="star-box">
                                                 <span>Your rating:</span>
-                                                <div class="rating-product">
+                                                <!-- <div class="rating-product">
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
