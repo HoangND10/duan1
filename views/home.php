@@ -1,3 +1,5 @@
+
+
 <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
     <div class="inner">
         <div class="head">
@@ -231,7 +233,7 @@
                                         </span>
                                         <div class="actions">
                                             <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="icon-heart"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen"></i></a>
+                                            <a href="" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen"></i></a>
                                             <a href="compare.html" class="action compare" title="Compare"><i class="icon-refresh"></i></a>
                                         </div>
                                         <button title="Add To Cart" class=" add-to-cart">Add
