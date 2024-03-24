@@ -205,9 +205,7 @@
                                     </ul>
                                 </li>
 
-                               
-
-                                <li><a href="index.php?act=lienhe">Contact us</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
                             </ul>
                         </div>
                     </div>
