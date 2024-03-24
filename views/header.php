@@ -202,8 +202,11 @@
 
                                     </ul>
                                 </li>
+                                
+                                <li><a href="tintuc.php">Contact us</a></li>
 
-                                <li><a href="contact.html">Contact us</a></li>
+
+
                             </ul>
                         </div>
                     </div>
