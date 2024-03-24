@@ -224,7 +224,7 @@
                                 <div class="product">
                                     <div class="thumb">
                                     <a href="'.$link.'"></a>
-                                        <img class="hover-image" src="'.$hinh.'" alt="Product" width="500px" />
+                                        <img class="hover-image" src="'.$hinh.'" alt="Product" width="310px"   />
                                         </a>
                                         <span class="badges">
                                             <span class="new">New</span>
@@ -238,12 +238,11 @@
                                             To Cart</button>
                                     </div>
                                     <div class="content">
-                                        <h5 class="title">tên sản phẩm  '.$tensp.'</></h5>
+                                        <h5 class="title">  '.$tensp.'</></h5>
                                         <span class="price">
-                                            <span class="new"> giá:<br>'.$gia.'</span>
+                                            <span class="new"><br>'.$gia.'</span>
                                         </span>
                                         <span class="price">
-                                            <span class="new"> số  lượng:<br>'.$soluong.'</span>
                                         </span>
                                     </div>
                                 </div>
@@ -254,7 +253,7 @@
                           
                             
                            
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="400">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="400" >
                                 <!-- Single Prodect -->
                                 <div class="product">
                                     <div class="thumb">
