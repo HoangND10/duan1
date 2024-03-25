@@ -23,6 +23,6 @@
                 <li><a href="index.php?act=dsbl">BÌNH LUẬN</a></li>
                 <li><a href="index.php?act=thongke">THỐNG KÊ</a></li>
                 <li><a href="index.php?act=bill">ĐƠN HÀNG</a></li>
-                <li><a href="../view/index.php">THOÁT</a></li>
+                <li><a href="../index.php">THOÁT</a></li>
             </ul>
         </div>
