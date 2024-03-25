@@ -29,7 +29,6 @@
                     <th>GIÁ</th>
                     <th>SỐ LƯỢNG</th>
                     <th>LOẠI SẢN PHẨM</th>
-                    <th>LƯỢT XEM</th>
                     <th></th>
                 </tr>
                 <?php
@@ -52,7 +51,6 @@
                             <td>' . $gia . '</td>
                             <td>' . $soluong . '</td>
                             <td>' . $tendm . '</td>
-                            <td>' . $luotxem . '</td>
                             <td><a href="' . $suasp . '"><input type="button" value="Sửa"></a><a href="' . $xoasp . '"><input type="button" value="Xóa"></a></td>
                         </tr>';
                 }

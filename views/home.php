@@ -218,7 +218,6 @@
                             foreach ($sanpham as $sp) {
                                 extract($sp);
                                 $hinh = "upload/" . $hinh;
-
                                 $link = "index.php?act=chitietsp&idsp=" . $idsp;
                                 echo '
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="200">
@@ -243,7 +242,7 @@
                                     <div class="content">
                                         <h5 class="title">  '.$tensp.'</></h5>
                                         <span class="price">
-                                            <span class="new"><br>'.$gia.'</span>
+                                            <span class="new"><br>'.$gia.'.000</span>
                                         </span>
                                         <span class="price">
                                         </span>
