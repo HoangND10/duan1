@@ -5,6 +5,7 @@ ini_set('display_errors', 1);
 
 ob_start();
 session_start();
+include "model/donhang.php";
 include "model/taikhoan.php";
 include 'model/pdo.php';
 include 'model/danhmuc.php';
@@ -116,6 +117,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             case "giohang":
                 include "views/viewcart/giohang.php";
             break;
+
+    
+    
     }
 } else {
     include 'views/home.php';
