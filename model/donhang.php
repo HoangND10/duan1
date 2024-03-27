@@ -37,11 +37,3 @@ function loadall_tt()
     return $listtt;
 }
 
-function tongdonhang(){
-    $tong=0;
-    foreach($_SESSION['mycart1'] as $cart1){
-        $thanhtien=$cart1[3]*$cart1[4];
-        $tong+=$thanhtien;
-    }
-    return $tong;
-}
