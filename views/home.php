@@ -1,12 +1,54 @@
-
-
 <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
     <div class="inner">
         <div class="head">
             <span class="title">Cart</span>
             <button class="offcanvas-close">×</button>
         </div>
-        <div class="body customScroll">
+        <?php
+        $tong = 0;
+        $i = 0;
+        foreach ($_SESSION['mycart'] as $cart) {
+            $hinh1 = $img_path . $cart[2];
+            $ttien = $cart[3] * $cart[4];
+            $tong += $ttien;
+            $xoasp = '<a href="index.php?act=deletecart&idcart=' . $i . '" ><input type="button" value="Xóa"></a>';
+            echo '    
+                    <div class="body customScroll">
+                        <ul class="minicart-product-list ">
+                            <li>
+                                <a href="" class="image">
+                                    <img src="' . $hinh1 . '" alt="Cart product Image"></a>
+                                <div class="content">
+                                    <a href="" class="title">' . $cart[1] . '</a>
+                                    <span class="quantity-price">' . $cart[4] . ' x <span class="amount">' . $cart[3] . '</span></span>
+                                    ' . $xoasp . '
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                ';
+            $i += 1;
+        }
+        ?>
+        <div class="foot">
+            <div class="sub-total">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="text-start">Total :</td>
+                            <td class="text-end theme-color"><?= $tong ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buttons">
+                <a href="" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
+                <a href="index.php?act=bill" class="btn btn-outline-dark current-btn">checkout</a>
+            </div>
+            <p class="minicart-message">Free Shipping on All Orders Over $100!</p>
+        </div>
+        <!-- <div class="body customScroll">
             <ul class="minicart-product-list">
                 <li>
                     <a href="single-product.html" class="image">
@@ -34,36 +76,8 @@
                     </div>
                 </li>
             </ul>
-        </div>
-        <div class="foot">
-            <div class="sub-total">
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td class="text-start">Sub-Total :</td>
-                            <td class="text-end">$523.30</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start">Eco Tax (-2.00) :</td>
-                            <td class="text-end">$4.52</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start">VAT (20%) :</td>
-                            <td class="text-end">$104.66</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start">Total :</td>
-                            <td class="text-end theme-color">$632.48</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="buttons">
-                <a href="cart.html" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
-                <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>
-            </div>
-            <p class="minicart-message">Free Shipping on All Orders Over $100!</p>
-        </div>
+        </div> -->
+
     </div>
 </div>
 
@@ -224,8 +238,8 @@
                                 <!-- Single Prodect -->
                                 <div class="product">
                                     <div class="thumb">
-                                    <a href="'.$link.'">
-                                        <img class="hover-image" src="'.$hinh.'" alt="Product" width="310px" height="260px"/>
+                                    <a href="' . $link . '">
+                                        <img class="hover-image" src="' . $hinh . '" alt="Product" width="310px" height="260px"/>
                                     
                                     </a>
                                         <span class="badges">
@@ -236,13 +250,18 @@
                                             <a href="" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen"></i></a>
                                             <a href="compare.html" class="action compare" title="Compare"><i class="icon-refresh"></i></a>
                                         </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
-                                            To Cart</button>
+                                        <form action="index.php?act=addtocart" method="post">
+                                            <input type="hidden" name="idsp" value="' . $idsp . '">
+                                            <input type="hidden" name="tensp" value="' . $tensp . '">
+                                            <input type="hidden" name="hinh" value="' . $hinh . '">
+                                            <input type="hidden" name="gia" value="' . $gia . '">
+                                            <input type="submit" name="addtocart" value="Add To Cart">
+                                        </form>
                                     </div>
                                     <div class="content">
-                                        <h5 class="title">  '.$tensp.'</></h5>
+                                        <h5 class="title">  ' . $tensp . '</></h5>
                                         <span class="price">
-                                            <span class="new"><br>'.$gia.'.000</span>
+                                            <span class="new"><br>' . $gia . '.000</span>
                                         </span>
                                         <span class="price">
                                         </span>
@@ -252,9 +271,9 @@
                                 ';
                             }
                             ?>
-                          
-                            
-                           
+
+
+
                             <!--  -->
                         </div>
                     </div>
