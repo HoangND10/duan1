@@ -33,7 +33,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             }
             $listsanpham = loadall_sanpham($kyw, $iddm);
             include "views/sanpham.php";
-            break;
+           
             break;
         case "chitietsp":
             if (isset($_GET['idsp']) && ($_GET['idsp'] > 0)) {
@@ -45,8 +45,15 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
 
         case 'shop':
+            if (isset($_GET['id_danhmuc']) && ($_GET['id_danhmuc'] > 0)) {
+                $iddm = $_GET['id_danhmuc'];
+                $dssp = load_sanpham_dm($iddm);
+                $tendm = load_ten_dm($iddm);
+            }
             include "views/shop.php";
             break;
+
+           
         case 'mytk':
             include "views/taikhoan.php";
             break;
