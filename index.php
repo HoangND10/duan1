@@ -9,6 +9,7 @@ include "model/taikhoan.php";
 include 'model/pdo.php';
 include 'model/danhmuc.php';
 include 'model/sanpham.php';
+include "model/binhluan.php";
 include 'views/header.php';
 
 $sanpham = loadall_sanpham_home();
