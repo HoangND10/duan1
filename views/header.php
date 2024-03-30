@@ -196,11 +196,11 @@
                                     <ul class="sub-menu">
 
                                         <?php
-                                        $listdm=loadall_danhmuc();
-                                        foreach($listdm as $dm){
+                                        $listdm = loadall_danhmuc();
+                                        foreach ($listdm as $dm) {
                                             extract($dm);
-                                            $linkdm='index.php?act=shop&&id_danhmuc='.$iddm;
-                                            echo '<a href='.$linkdm.'>'.$tendm.'</a>';
+                                            $linkdm = 'index.php?act=shop&&id_danhmuc=' . $iddm;
+                                            echo '<a href=' . $linkdm . '>' . $tendm . '</a>';
                                         }
                                         ?>
 

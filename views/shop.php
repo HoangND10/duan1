@@ -37,14 +37,21 @@
                     <div class="shop-bottom-area">
 
                         <div class="row">
-                            
-                            <div class="col-lg-4  col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-delay="400">
+                            <?php
+                            foreach($dssp as $key){
+                                extract($key);
+                                $hinh = "upload/".$hinh;
+                                $linksp= "index.php?act=shop&id_danhmuc".$iddm;
+
+
+                                echo '
+                                <div class="col-lg-4  col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-delay="400">
                                 <!-- Single Prodect -->
                                 <div class="product mb-25px">
                                     <div class="thumb">
                                         <a href="shop-left-sidebar.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product" />
+                                            <img src="'.$hinh.'"  <a href="'.$linksp.'"></a>          
+                                           
                                         </a>
                                         <span class="badges">
                                             <span class="sale">-7%</span>
@@ -60,164 +67,18 @@
                                             To Cart</button>
                                     </div>
                                     <div class="content">
-                                        <h5 class="title"><a href="shop-left-sidebar.html">Wooden decorations</a></h5>
+                                        <h5 class="title"><a href="shop-left-sidebar.html">'.$tensp.'</a></h5>
                                         <span class="price">
-                                            <span class="new">$30.50</span>
-                                        <span class="old">$38.00</span>
-                                        </span>
+                                            <span class="new">'.$gia.'</span>
+                                       
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4  col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-delay="400">
-                                <!-- Single Prodect -->
-                                <div class="product mb-25px">
-                                    <div class="thumb">
-                                        <a href="shop-left-sidebar.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product" />
-                                        </a>
-                                        <span class="badges">
-                                            <span class="sale">-7%</span>
-                                        </span>
-                                        <div class="actions">
-                                            <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
-                                                    class="icon-heart"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen"></i></a>
-                                            <a href="compare.html" class="action compare" title="Compare"><i
-                                                    class="icon-refresh"></i></a>
-                                        </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
-                                            To Cart</button>
-                                    </div>
-                                    <div class="content">
-                                        <h5 class="title"><a href="shop-left-sidebar.html">Wooden decorations</a></h5>
-                                        <span class="price">
-                                            <span class="new">$30.50</span>
-                                        <span class="old">$38.00</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4  col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-delay="400">
-                                <!-- Single Prodect -->
-                                <div class="product mb-25px">
-                                    <div class="thumb">
-                                        <a href="shop-left-sidebar.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product" />
-                                        </a>
-                                        <span class="badges">
-                                            <span class="sale">-7%</span>
-                                        </span>
-                                        <div class="actions">
-                                            <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
-                                                    class="icon-heart"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen"></i></a>
-                                            <a href="compare.html" class="action compare" title="Compare"><i
-                                                    class="icon-refresh"></i></a>
-                                        </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
-                                            To Cart</button>
-                                    </div>
-                                    <div class="content">
-                                        <h5 class="title"><a href="shop-left-sidebar.html">Wooden decorations</a></h5>
-                                        <span class="price">
-                                            <span class="new">$30.50</span>
-                                        <span class="old">$38.00</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4  col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-delay="400">
-                                <!-- Single Prodect -->
-                                <div class="product mb-25px">
-                                    <div class="thumb">
-                                        <a href="shop-left-sidebar.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product" />
-                                        </a>
-                                        <span class="badges">
-                                            <span class="sale">-7%</span>
-                                        </span>
-                                        <div class="actions">
-                                            <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
-                                                    class="icon-heart"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen"></i></a>
-                                            <a href="compare.html" class="action compare" title="Compare"><i
-                                                    class="icon-refresh"></i></a>
-                                        </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
-                                            To Cart</button>
-                                    </div>
-                                    <div class="content">
-                                        <h5 class="title"><a href="shop-left-sidebar.html">Wooden decorations</a></h5>
-                                        <span class="price">
-                                            <span class="new">$30.50</span>
-                                        <span class="old">$38.00</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4  col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-delay="400">
-                                <!-- Single Prodect -->
-                                <div class="product mb-25px">
-                                    <div class="thumb">
-                                        <a href="shop-left-sidebar.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product" />
-                                        </a>
-                                        <span class="badges">
-                                            <span class="sale">-7%</span>
-                                        </span>
-                                        <div class="actions">
-                                            <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
-                                                    class="icon-heart"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen"></i></a>
-                                            <a href="compare.html" class="action compare" title="Compare"><i
-                                                    class="icon-refresh"></i></a>
-                                        </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
-                                            To Cart</button>
-                                    </div>
-                                    <div class="content">
-                                        <h5 class="title"><a href="shop-left-sidebar.html">Wooden decorations</a></h5>
-                                        <span class="price">
-                                            <span class="new">$30.50</span>
-                                        <span class="old">$38.00</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4  col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-delay="400">
-                                <!-- Single Prodect -->
-                                <div class="product mb-25px">
-                                    <div class="thumb">
-                                        <a href="shop-left-sidebar.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product" />
-                                        </a>
-                                        <span class="badges">
-                                            <span class="sale">-7%</span>
-                                        </span>
-                                        <div class="actions">
-                                            <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
-                                                    class="icon-heart"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen"></i></a>
-                                            <a href="compare.html" class="action compare" title="Compare"><i
-                                                    class="icon-refresh"></i></a>
-                                        </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
-                                            To Cart</button>
-                                    </div>
-                                    <div class="content">
-                                        <h5 class="title"><a href="shop-left-sidebar.html">Wooden decorations</a></h5>
-                                        <span class="price">
-                                            <span class="new">$30.50</span>
-                                        <span class="old">$38.00</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                                ';
+                            }
+                            ?> 
+                                     
+                         
                             
                         </div>
                         <!--  Pagination Area Start -->
@@ -246,15 +107,7 @@
                                 <h3 class="sidebar-title">Category</h3>
                             </div>
                             <div class="sidebar-widget-category">
-                                <?php
-                                    $listdm=loadall_danhmuc();
-                                    foreach($listdm as $dm){
-                                        extract($dm);
-                                        $linkdm='index.php?act=shop&&id_danhmuc='.$iddm;
-                                        echo '<ul>
-                                        <li><a href="'.$linkdm.'" class="selected">'.$tendm.' </a></li></ul>';
-                                    }
-
+                                <?= $tendm  
                                 ?>
 
 

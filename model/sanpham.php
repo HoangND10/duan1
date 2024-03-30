@@ -43,7 +43,7 @@ function load_ten_dm($iddm)
         $sql = "select * from danhmuc where iddm=" . $iddm;
         $dm = pdo_query_one($sql);
         extract($dm);
-        return $name;
+        return $tendm;
     } else {
         return "";
     }
@@ -61,6 +61,12 @@ function update_sanpham($idsp, $iddm, $tensp, $giasp, $soluong, $mota, $hinh)
     else
         $sql = "update sanpham set iddm='" . $iddm . "',tensp='" . $tensp . "',gia='" . $giasp . "',soluong='" . $soluong . "',mota='" . $mota . "' where idsp=" . $idsp;
     pdo_execute($sql);
+}
+function load_sanpham_dm($iddm){
+    $sql ="select * from sanpham WHERE iddm=".$iddm;
+    $listsp= pdo_query($sql);
+    return $listsp;
+
 }
 
 

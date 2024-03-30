@@ -1,7 +1,7 @@
 <?php
-function insert_donhang($ten, $diachi, $sdt, $email, $idsp, $order_date, $tongdonhang, $trangthai)
+function insert_donhang($iduser, $tongtien, $pttt, $order_date, $trangthai)
 {
-    $sql = "INSERT INTO donhang(user,address,tel,email,sanpham_id,order_date,total_amount,trangthai) VALUES('$ten','$diachi','$sdt','$email','$idsp','$order_date','$tongdonhang','$trangthai');";
+    $sql = "INSERT INTO donhang(iduser,tongtien,pttt,ngaymua,idtt) VALUES('$iduser', '$tongtien', '$pttt', '$order_date', '$trangthai');";
     // echo $sql;
     // die();
     pdo_execute($sql);
@@ -36,4 +36,12 @@ function loadall_tt()
     $listtt = pdo_query($sql);
     return $listtt;
 }
-
+function tt()
+{
+    $tong = 0;
+    foreach ($_SESSION['mycart'] as $cart) {
+        $ttien = $cart[3] * $cart[4];
+        $tong += $ttien;
+    }
+    return $tong;
+}
