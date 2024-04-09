@@ -1,2 +1,2 @@
 <?php
-$img_path = "http://localhost/da11/";
+$img_path = "http://localhost/duan1/";

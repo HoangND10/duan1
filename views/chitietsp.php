@@ -108,24 +108,16 @@
                             <div class="col-lg-5">
                                 <div class="ratting-form-wrapper pl-50">
                                     <div class="ratting-form">
-                                        <form action="index.php?act=chitietsp&idsp=<?=$idsp?>" method="POST">
-                                            <div class="star-box">
-                                                <!-- <span>Your rating:</span> -->
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="rating-form-style">
-                                                        <input type="hidden" name="idsp" value="<?=$idsp ?>" />
-                                                    </div>
-                                                </div>
-                                                
+                                        <form action="index.php?act=chitietsp&idsp=<?= $idsp?>" method="POST">
+                                                                                         
                                                 <div class="col-md-12">
                                                     <div class="rating-form-style form-submit">
-                                                        <textarea type="text" name="noidung"></textarea>
+                                                        <textarea type="text" name="noidung" value="<?=$noidung?>" ></textarea>
                                                         <button class="btn btn-primary btn-hover-color-primary " type="submit" name="submit" value="Submit">Submit</button>
+                                                            <!-- <input type="text" name="noidung">
+                                                            <input type="submit" name="guibinhluan" value="Gửi bình luận"> -->
                                                     </div>
                                                 </div>
-                                            </div>
                                         </form>
                                     </div>
                                 </div>

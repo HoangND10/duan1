@@ -7,6 +7,7 @@ ob_start();
 session_start();
 include "global.php";
 include "model/taikhoan.php";
+include 'model/binhluan.php';
 include 'model/pdo.php';
 include 'model/danhmuc.php';
 include 'model/sanpham.php';
